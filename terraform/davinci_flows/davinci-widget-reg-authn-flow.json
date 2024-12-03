@@ -1,29 +1,20 @@
 {
-  "companyId": "c6524032-213e-4a51-979f-57f97add6769",
+  "companyId": "5b572881-b66b-498e-b5a6-33d95dae8c10",
   "authTokenExpireIds": [],
   "connectorIds": [
     "httpConnector",
     "pingOneSSOConnector",
     "annotationConnector"
   ],
-  "createdDate": 1722458930976,
-  "currentVersion": 4,
-  "customerId": "ee728871d18a3b9b273c87192cee4a18",
-  "deployedDate": 1722458935311,
+  "createdDate": 1733253052093,
+  "currentVersion": 3,
+  "customerId": "cddf227d6e6a895d4c4cd75b27469180",
+  "deployedDate": 1733253056226,
   "description": "Imported on Tue May 16 2023 19:35:07 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
-  "inputSchemaCompiled": {
-    "parameters": {
-      "type": "object",
-      "properties": {},
-      "additionalProperties": false,
-      "required": []
-    }
-  },
-  "isInputSchemaSaved": false,
   "isOutputSchemaSaved": false,
   "name": "AppTeam PingOne DaVinci Registration Example",
-  "publishedVersion": 4,
+  "publishedVersion": 3,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -31,9 +22,9 @@
     "logLevel": 2
   },
   "timeouts": "null",
-  "updatedDate": 1722458935391,
-  "flowId": "6572c12c874286ec27eccc1626d37883",
-  "versionId": 4,
+  "updatedDate": 1733253056247,
+  "flowId": "89ea432ec6bd145b38cfdf125ae62180",
+  "versionId": 3,
   "graphData": {
     "elements": {
       "nodes": [
@@ -69,6 +60,9 @@
                   }
                 ]
               },
+              "nodeDescription": {
+                "value": "Prompt for Email"
+              },
               "nodeTitle": {
                 "value": "Get User"
               },
@@ -84,9 +78,6 @@
                     ]
                   }
                 ]
-              },
-              "nodeDescription": {
-                "value": "Prompt for Email"
               }
             },
             "status": "configured",
@@ -120,14 +111,14 @@
                   "email"
                 ]
               },
+              "nodeDescription": {
+                "value": "Check if user exists"
+              },
               "nodeTitle": {
                 "value": "Check User"
               },
               "userIdentifierForFindUser": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.cfpq1xg2dc.payload.output.email}}\",\n        \"tooltip\": \"{{local.cfpq1xg2dc.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeDescription": {
-                "value": "Check if user exists"
               }
             },
             "status": "configured",
@@ -218,6 +209,9 @@
                   }
                 ]
               },
+              "nodeDescription": {
+                "value": "Prompt for existing user password"
+              },
               "nodeTitle": {
                 "value": "Get Password"
               },
@@ -234,9 +228,6 @@
                     ]
                   }
                 ]
-              },
-              "nodeDescription": {
-                "value": "Prompt for existing user password"
               }
             },
             "status": "configured",
@@ -266,7 +257,7 @@
             "nodeType": "CONNECTION",
             "properties": {
               "customHTML": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<form id=\\\"registerForm\\\">\\n    <p>We did not locate that account. Sign up now!</p>\\n    <input type=\\\"text\\\" id=\\\"email\\\" placeholder=\\\"Email address\\\" />\\n    <input type=\\\"password\\\" id=\\\"password\\\" placeholder=\\\"password\\\" />\\n    <button class=\\\"btn\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\" data-skform=\\\"registerForm\\\" data-skbuttonvalue=\\\"submit\\\">Register</button>\\n</form>\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<form id=\\\"registerForm\\\">    <p>We did not locate that account. Sign up now!</p>    <!-- Email Input Field -->    <input type=\\\"text\\\" id=\\\"email\\\" placeholder=\\\"Email address\\\" required />    <!-- Password Input Field -->    <input type=\\\"password\\\" id=\\\"password\\\" placeholder=\\\"password\\\" required />    <!-- Password Requirement Text -->    <small id=\\\"passwordRequirements\\\" style=\\\"display: block; margin-top: 0.5rem; color: #6c757d;\\\">        Password must be at least 8 characters and contain 1 uppercase, 1 lowercase, 1 digit, and 1 symbol    </small>    <!-- Submit Button -->    <button class=\\\"btn\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\" data-skform=\\\"registerForm\\\" data-skbuttonvalue=\\\"submit\\\">Register</button></form>\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "formFieldsList": {
                 "value": [
@@ -293,6 +284,9 @@
                   }
                 ]
               },
+              "nodeDescription": {
+                "value": "Register new user"
+              },
               "nodeTitle": {
                 "value": "Registration Window"
               },
@@ -318,9 +312,6 @@
                     ]
                   }
                 ]
-              },
-              "nodeDescription": {
-                "value": "Register new user"
               }
             },
             "status": "configured",
@@ -374,6 +365,9 @@
               "email": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.0di26c5iy7.payload.output.email}}\",\n        \"tooltip\": \"{{local.0di26c5iy7.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
+              "nodeDescription": {
+                "value": "Create new user"
+              },
               "nodeTitle": {
                 "value": "Submit Registration"
               },
@@ -385,9 +379,6 @@
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.0di26c5iy7.payload.output.email}}\",\n        \"tooltip\": \"{{local.0di26c5iy7.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeDescription": {
-                "value": "Create new user"
               }
             },
             "status": "configured",
@@ -450,11 +441,11 @@
                   }
                 ]
               },
-              "nodeTitle": {
-                "value": "Successfully Completed Login"
-              },
               "nodeDescription": {
                 "value": "Display login success"
+              },
+              "nodeTitle": {
+                "value": "Successfully Completed Login"
               }
             },
             "status": "configured",
@@ -508,14 +499,14 @@
               "matchAttribute": {
                 "value": "email"
               },
+              "nodeDescription": {
+                "value": "Check provided password"
+              },
               "nodeTitle": {
                 "value": "Check Password"
               },
               "password": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"password\",\n        \"data\": \"{{local.eg2kadjdo1.payload.output.password}}\",\n        \"tooltip\": \"{{local.eg2kadjdo1.payload.output.password}}\",\n        \"children\": [\n          {\n            \"text\": \"password\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeDescription": {
-                "value": "Check provided password"
               }
             },
             "status": "configured",
@@ -583,11 +574,11 @@
               "customScript": {
                 "value": "(() => {\n    document.getElementById('login').addEventListener('click', () => window.location.reload());\n})();"
               },
-              "nodeTitle": {
-                "value": "Successfully Completed Reg"
-              },
               "nodeDescription": {
                 "value": "Display successful registration"
+              },
+              "nodeTitle": {
+                "value": "Successfully Completed Reg"
               }
             },
             "status": "configured",
@@ -979,9 +970,8 @@
       "name": "null"
     }
   },
-  "inputSchema": [],
   "flowColor": "#AFD5FF",
-  "savedDate": 1722458930842,
+  "savedDate": 1733253051968,
   "variables": [],
   "connections": []
 }
